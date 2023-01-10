@@ -1,3 +1,4 @@
 flask
 build
 pytest
+flake8
