@@ -6,7 +6,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . ./
 
-
-
-RUN cd src
-RUN python rest_api.py
+RUN python src/rest_api.py
