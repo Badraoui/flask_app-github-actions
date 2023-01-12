@@ -1,9 +1,13 @@
-FROM datamechanics/spark:3.1-latest
-ENV PYSPARK_MAJOR_PYTHON_VERSION=3
-WORKDIR /opt/application/
-COPY requirements.txt .
-RUN pip3 install -r requirements.txt 
 
-COPY . ./
+FROM python:3.6-jessie
 
-RUN python src/rest_api.py
+RUN apt update
+
+WORKDIR /app
+ADD requirements.txt /app/requirements.txt
+RUN pip install -r /app/requirements.txt
+
+ADD . /app
+
+ENV PORT 8080
+RUN python /APP/rest_api.py
