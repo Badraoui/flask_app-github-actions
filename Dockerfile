@@ -11,4 +11,4 @@ ADD . /app
 
 ENV PORT 8080
 
-#RUN python /app/rest_api.py
+CMD python /app/app.py
