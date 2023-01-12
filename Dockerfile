@@ -10,4 +10,5 @@ RUN pip install -r /app/requirements.txt
 ADD . /app
 
 ENV PORT 8080
-RUN python /app/rest_api.py
+
+#RUN python /app/rest_api.py
