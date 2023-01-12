@@ -4,10 +4,8 @@ WORKDIR /opt/application/
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt 
 
-COPY *.py ./
-COPY *.yml ./
-COPY *.md ./
-COPY src/rest_api.py ./
+COPY . ./
+
 
 
 RUN cd src
