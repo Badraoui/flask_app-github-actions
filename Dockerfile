@@ -15,4 +15,8 @@ RUN pip install --upgrade -r requirements.txt
 # For environments with multiple CPU cores, increase the number of workers
 # to be equal to the cores available.
 
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 app:app
+EXPOSE 8000
+CMD ["gunicorn"  , "--bind", "127.0.0.1:8000", "app:app"]
+
+
+#let's add a comment
