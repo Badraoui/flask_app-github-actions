@@ -81,6 +81,6 @@ jobs:
       run: |-
         gcloud container clusters get-credentials ${{ env.GKE_CLUSTER }} --zone us-central1
         kubectl create deployment ${{ env.DEPLOYMENT_NAME }} --image=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
-        kubectl expose deployment ${{ env.DEPLOYMENT_NAME }} --type LoadBalancer --port 80 --target-port 8080
+        kubectl expose deployment ${{ env.DEPLOYMENT_NAME }} --type LoadBalancer --port 80 --target-port 8000
         kubectl rollout status deployment/${{ env.DEPLOYMENT_NAME }}
         kubectl get service ${{ env.DEPLOYMENT_NAME }}
