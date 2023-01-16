@@ -21,7 +21,7 @@ env:
   DEPLOYMENT_NAME: gke-test # Add your deployment name here.
   IMAGE: static-site
 
-  ${{ env.DEPLOYMENT_NAME }}
+
 
 jobs:
   setup-build-publish-deploy:
