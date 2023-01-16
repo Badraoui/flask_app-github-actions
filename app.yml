@@ -1,3 +1,0 @@
-service: python-api-docker
-runtime: custom
-env: flex
