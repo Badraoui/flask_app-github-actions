@@ -10,7 +10,7 @@ env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: autopilot-cluster-1    # Add your cluster name here.
   GKE_ZONE: us-central1   # Add your cluster zone here.
-  DEPLOYMENT_NAME: products-api # Add your deployment name here.
+  DEPLOYMENT_NAME: abdou-api # Add your deployment name here.
   IMAGE: products-api-image
 
 
@@ -87,11 +87,3 @@ jobs:
 
 
 
-
-
-        kubectl create deployment myflaskapi --image=gcr.io/productdatapipeline/mylocalapi:1.0.0
-
-         kubectl expose deployment myflaskapi --type LoadBalancer --port 80 --target-port 8000
-
- kubectl rollout status deployment/myflaskapi
- kubectl get service myflaskapi
