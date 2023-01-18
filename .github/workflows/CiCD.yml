@@ -10,7 +10,7 @@ env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: autopilot-cluster-1    # Add your cluster name here.
   GKE_ZONE: us-central1   # Add your cluster zone here.
-  DEPLOYMENT_NAME: products-app # Add your deployment name here.
+  DEPLOYMENT_NAME: products-api # Add your deployment name here.
   IMAGE: products-api-image
 
 
