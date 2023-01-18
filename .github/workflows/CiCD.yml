@@ -71,7 +71,7 @@ jobs:
         docker push "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
 
     #install
-    - name : install plugin
+    - name : install kubectl plugin
       run : |-
         gcloud components install gke-gcloud-auth-plugin
         gke-gcloud-auth-plugin --version 
