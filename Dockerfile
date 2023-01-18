@@ -16,7 +16,7 @@ RUN pip install --upgrade -r requirements.txt
 # to be equal to the cores available.
 
 EXPOSE 8000
-CMD ["gunicorn"  , "--bind", "127.0.0.1:8000", "app:app"]
+CMD ["gunicorn"  , "--bind", "0.0.0.0:8000", "app:app"]
 
 
 #let's add a comment
