@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    name = os.environ.get("NAME", "ABDOU")
-    return f"Hello {name}!"
+    name = os.environ.get("NAME", "successfully")
+    return f"the flask app has been deployed  {name}!"
 
 
 
