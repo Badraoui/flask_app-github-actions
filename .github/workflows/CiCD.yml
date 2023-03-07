@@ -8,8 +8,8 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-  GKE_CLUSTER: autopilot-cluster-1    # Add your cluster name here.
-  GKE_ZONE: us-central1   # Add your cluster zone here.
+  GKE_CLUSTER: autopilot-cluster-2   # Add your cluster name here.
+  GKE_ZONE: europe-central2   # Add your cluster zone here.
   DEPLOYMENT_NAME: flask-api # Add your deployment name here.
   IMAGE: flask-api-image
 
