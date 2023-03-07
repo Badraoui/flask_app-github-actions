@@ -79,7 +79,7 @@ jobs:
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
       run: |-
-        gcloud container clusters get-credentials ${{ env.GKE_CLUSTER }} --zone us-central1
+        gcloud container clusters get-credentials ${{ env.GKE_CLUSTER }} --zone europe-central2
         kubectl create deployment ${{ env.DEPLOYMENT_NAME }} --image=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
         kubectl expose deployment ${{ env.DEPLOYMENT_NAME }} --type LoadBalancer --port 9090 --target-port 8000
         kubectl rollout status deployment/${{ env.DEPLOYMENT_NAME }}
